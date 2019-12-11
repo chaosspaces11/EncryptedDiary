@@ -5,4 +5,8 @@
 #ifndef C_PRACTICE_SECURITY_H
 #define C_PRACTICE_SECURITY_H
 
+void encrypt(char* fileName);
+
+void decrypt(char* fileName);
+
 #endif //C_PRACTICE_SECURITY_H
