@@ -5,8 +5,9 @@
 
 #include <stdio.h>
 #include "Security.h"
+#include "Enter.h"
 
 int main()
 {
-
+    enter();
 }
