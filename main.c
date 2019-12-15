@@ -4,8 +4,10 @@
 
 
 #include <stdio.h>
+#include "Security.h"
+#include "Enter.h"
 
 int main()
 {
-    printf("Testing123\n");
+    enter();
 }
