@@ -5,6 +5,8 @@
 #ifndef ENCRYPTEDDIARY_ENTER_H
 #define ENCRYPTEDDIARY_ENTER_H
 
-void enter();
+void createEntry();
+
+void displayHelp();
 
 #endif //ENCRYPTEDDIARY_ENTER_H
