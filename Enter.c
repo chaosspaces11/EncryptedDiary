@@ -4,13 +4,13 @@
 
 #include "Enter.h"
 #include "Security.h"
-#include "stdio.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-#include "string.h"
-#include "time.h"
+#include <string.h>
+#include <time.h>
 
-void enter()
+void createEntry()
 {
     char string[BUFSIZ];
     time_t currTime = time(NULL);
@@ -24,7 +24,7 @@ void enter()
     strcat(fileString, "/.diary/");
     strcat(fileString, timeString);
 
-    printf("%s\n", fileString);
+    printf("Creating Entry %s:\n", fileString);
 
     FILE* diaryFile = fopen(fileString, "r");
     if (diaryFile == NULL)
@@ -46,4 +46,12 @@ void enter()
         response = scanf("%s", string);
     }
     fclose(diaryFile);
+
+    printf("\nEncrypting File...\n");
+    encrypt(fileString);
+    printf("Encryption Completed.\n");
+}
+
+void displayHelp() {
+    printf("Usage:\nd : Display all entries\nv dd-mm-yy : View specific entry\nc : Create new entry\n? : View help\nq : Quit\n");
 }
